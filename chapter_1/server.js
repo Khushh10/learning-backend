@@ -29,7 +29,7 @@ app.get('/dashboard', (req, res) => {
 
 app.get('/api/data', (req, res) => {
     console.log('API endpoint hit')
-    res.send(data)
+    res.status(559).send(data)
 })
 
 
