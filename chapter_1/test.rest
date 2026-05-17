@@ -6,3 +6,11 @@ GET http://localhost:8383/dashboard
 
 ### TEST GET USER
 GET http://localhost:8383/api/data
+
+### Data endpoint for adding a user
+POST http://localhost:8383/api/data
+Content-Type: application/json
+
+{
+    "name": "Trial User"
+}
