@@ -3,4 +3,20 @@ const db = new DatabaseSync(':memory:')
 
 db.exec(`
     create table users (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        username TEXT UNIQUE,
+        password TEXT
+    )
+`)
+
+db.exec(`
+    CREATE TABLE todos(
+        id INTEGER,
+        user_id INTEGER,
+        task TEXT,
+        completed BOOLEAN default 0,
+        FOREIGN KEY (user_id) REFERENCES users(id)
+    )
     `)
+
+export default db
